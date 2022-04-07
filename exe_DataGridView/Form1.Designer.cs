@@ -30,6 +30,11 @@ namespace exe_DataGridView
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -50,11 +55,12 @@ namespace exe_DataGridView
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(515, 55);
+            this.label1.Location = new System.Drawing.Point(410, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 20);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(464, 41);
+            this.label1.TabIndex = 1;
             this.label1.Text = "Data Mahasiswa Prodi TI";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -62,10 +68,11 @@ namespace exe_DataGridView
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Thistle;
             this.pictureBox1.Image = global::exe_DataGridView.Properties.Resources.LAMBANG_UMY;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 43);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 107);
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.Size = new System.Drawing.Size(125, 181);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // dataGridView1
