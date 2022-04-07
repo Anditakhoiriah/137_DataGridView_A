@@ -29,9 +29,22 @@ namespace exe_DataGridView
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.prodiTIDataSet = new exe_DataGridView.ProdiTIDataSet();
+            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mahasiswaTableAdapter = new exe_DataGridView.ProdiTIDataSetTableAdapters.MahasiswaTableAdapter();
+            this.nIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,9 +64,81 @@ namespace exe_DataGridView
             this.pictureBox1.Image = global::exe_DataGridView.Properties.Resources.LAMBANG_UMY;
             this.pictureBox1.Location = new System.Drawing.Point(45, 55);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(276, 349);
+            this.pictureBox1.Size = new System.Drawing.Size(126, 107);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nIMDataGridViewTextBoxColumn,
+            this.namaMhsDataGridViewTextBoxColumn,
+            this.alamatMhsDataGridViewTextBoxColumn,
+            this.sexDataGridViewTextBoxColumn,
+            this.phoneMhsDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.mahasiswaBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(28, 215);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1195, 150);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // prodiTIDataSet
+            // 
+            this.prodiTIDataSet.DataSetName = "ProdiTIDataSet";
+            this.prodiTIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mahasiswaBindingSource
+            // 
+            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.prodiTIDataSet;
+            // 
+            // mahasiswaTableAdapter
+            // 
+            this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            // 
+            // nIMDataGridViewTextBoxColumn
+            // 
+            this.nIMDataGridViewTextBoxColumn.DataPropertyName = "NIM";
+            this.nIMDataGridViewTextBoxColumn.HeaderText = "No Mahasiswa";
+            this.nIMDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nIMDataGridViewTextBoxColumn.Name = "nIMDataGridViewTextBoxColumn";
+            this.nIMDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // namaMhsDataGridViewTextBoxColumn
+            // 
+            this.namaMhsDataGridViewTextBoxColumn.DataPropertyName = "NamaMhs";
+            this.namaMhsDataGridViewTextBoxColumn.HeaderText = "Nama Mahasiswa";
+            this.namaMhsDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.namaMhsDataGridViewTextBoxColumn.Name = "namaMhsDataGridViewTextBoxColumn";
+            this.namaMhsDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // alamatMhsDataGridViewTextBoxColumn
+            // 
+            this.alamatMhsDataGridViewTextBoxColumn.DataPropertyName = "AlamatMhs";
+            this.alamatMhsDataGridViewTextBoxColumn.HeaderText = "Alamat Mahasiswa";
+            this.alamatMhsDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.alamatMhsDataGridViewTextBoxColumn.Name = "alamatMhsDataGridViewTextBoxColumn";
+            this.alamatMhsDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sexDataGridViewTextBoxColumn
+            // 
+            this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
+            this.sexDataGridViewTextBoxColumn.HeaderText = "Jenis Kelamin";
+            this.sexDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
+            this.sexDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // phoneMhsDataGridViewTextBoxColumn
+            // 
+            this.phoneMhsDataGridViewTextBoxColumn.DataPropertyName = "PhoneMhs";
+            this.phoneMhsDataGridViewTextBoxColumn.HeaderText = "No Telepon";
+            this.phoneMhsDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.phoneMhsDataGridViewTextBoxColumn.Name = "phoneMhsDataGridViewTextBoxColumn";
+            this.phoneMhsDataGridViewTextBoxColumn.Width = 150;
             // 
             // Form1
             // 
@@ -61,11 +146,16 @@ namespace exe_DataGridView
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(1252, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,6 +165,15 @@ namespace exe_DataGridView
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private ProdiTIDataSet prodiTIDataSet;
+        private System.Windows.Forms.BindingSource mahasiswaBindingSource;
+        private ProdiTIDataSetTableAdapters.MahasiswaTableAdapter mahasiswaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nIMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaMhsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamatMhsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneMhsDataGridViewTextBoxColumn;
     }
 }
 
