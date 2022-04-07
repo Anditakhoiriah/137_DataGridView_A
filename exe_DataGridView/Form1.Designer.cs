@@ -37,6 +37,7 @@ namespace exe_DataGridView
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
             this.label1.Location = new System.Drawing.Point(515, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 20);
@@ -46,6 +47,7 @@ namespace exe_DataGridView
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Thistle;
             this.pictureBox1.Image = global::exe_DataGridView.Properties.Resources.LAMBANG_UMY;
             this.pictureBox1.Location = new System.Drawing.Point(45, 55);
             this.pictureBox1.Name = "pictureBox1";
@@ -57,6 +59,7 @@ namespace exe_DataGridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(1252, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
